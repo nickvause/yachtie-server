@@ -1,9 +1,9 @@
 
-# REQUIREMENTS
+# Requirements
 + Docker
 + NodeJS >14 & NPM
 
-# GETTING STARTED
+# Getting Started
 ```npm i```
 
 ```npm run migrate```
@@ -12,10 +12,10 @@
 
 Then set up your DB as below.
 
-# .ENV
+# Environment
 Copy .env.example to .env and adjust as necessary. This was originally written on OSX so YMMV!
 
-# DB
+# Database
 The DB will need initialisation and seeding to start development.
 + Start the DB (its a docker service, started above).
 + Connect using your favourite MySQL/MariaDB Client.
