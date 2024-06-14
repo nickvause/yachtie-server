@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  yachtie-db-dev:
+    hostname: yachtie_db
+    image: mariadb
+    container_name: yachtie-db-dev
+    env_file: .env
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - mynetwork
+
+  yachtie-server:
+    build: .
+    container_name: yachtie-server
+    depends_on:
+      - yachtie-db-dev
+    env_file: .env
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/src/app # Mount the current directory to /usr/src/app in the container
+      - .:/.env
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mariadb-data:
