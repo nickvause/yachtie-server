@@ -18,6 +18,7 @@ The DB will need initialisation and seeding to start development.
 + Connect using your favourite MySQL/MariaDB Client.
 + Create a Database and user account if you wish.
 + Run the seed job below to load in some data:
+
 ```npx sequelize-cli db:seed:all```
 
 # Development
