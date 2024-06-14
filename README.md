@@ -5,8 +5,11 @@
 
 # GETTING STARTED
 ```npm i```
+
 ```npm run migrate```
+
 ```docker-compose up --build```
+
 Then set up your DB as below.
 
 # .ENV
@@ -24,6 +27,7 @@ The DB will need initialisation and seeding to start development.
 # Development
 ## To create a new DB migration:
 ```npx sequelize-cli migration:generate --name <migration-name>```
+
 ```npm run migrate``` 
 
 
