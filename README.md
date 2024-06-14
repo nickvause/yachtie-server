@@ -1,6 +1,7 @@
 
-#REQUIREMENTS
+# REQUIREMENTS
 Docker
+NodeJS >14
 
-#RUNNING
-docker-compose up --build
+# RUNNING
+```docker-compose up --build```
